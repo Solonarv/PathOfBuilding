@@ -330,6 +330,7 @@ local modNameList = {
 	["damage over time"] = { "Damage", flags = ModFlag.Dot },
 	["physical damage over time"] = { "PhysicalDamage", flags = ModFlag.Dot },
 	["burning damage"] = { "FireDamage", flags = ModFlag.Dot },
+	["ignite damage"] = {"FireDamage", flags = ModFlag.Dot },
 	-- Crit/accuracy/speed modifiers
 	["critical strike chance"] = "CritChance",
 	["attack critical strike chance"] = { "CritChance", flags = ModFlag.Attack },

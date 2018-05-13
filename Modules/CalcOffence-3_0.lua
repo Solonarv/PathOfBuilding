@@ -1711,7 +1711,7 @@ function calcs.offence(env, actor)
 					s_format("Ignite mode: %s ^8(can be changed in the Configuration tab)", igniteMode == "CRIT" and "Crit Damage" or "Average Damage")
 				}
 			end
-			local baseVal = calcAilmentDamage("Ignite", sourceHitDmg, sourceCritDmg) * 0.4
+			local baseVal = calcAilmentDamage("Ignite", sourceHitDmg, sourceCritDmg) * 0.5
 			if baseVal > 0 then
 				skillFlags.ignite = true
 				local effMult = 1
