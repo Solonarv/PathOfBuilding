@@ -2334,6 +2334,7 @@ skills["Flameblast"] = {
 		--"base_skill_show_average_damage_instead_of_dps" = ?
 		mod("Multiplier:FlameblastStage", "BASE", 9, 0, 0, { type = "SkillPart", skillPart = 2 }), 
 		skill("dpsMultiplier", 0.1, { type = "SkillPart", skillPart = 2 }), 
+		mod("EnemyIgniteChance", "BASE", 50)
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
