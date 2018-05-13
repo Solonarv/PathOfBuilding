@@ -697,7 +697,7 @@ skills["SupportDeadlyAilments"] = {
 	excludeSkillTypes = { },
 	baseMods = {
 		mod("ManaCost", "MORE", 30), 
-		mod("Damage", "MORE", -20, ModFlag.Hit), --"support_better_ailments_hit_damage_+%_final" = -20
+		mod("Damage", "MORE", -10, ModFlag.Hit), --"support_better_ailments_hit_damage_+%_final" = -20
 	},
 	qualityMods = {
 		mod("Damage", "INC", 0.5, ModFlag.Dot), --"damage_over_time_+%" = 0.5
@@ -726,7 +726,7 @@ skills["SupportDeadlyAilments"] = {
 		[17] = { 64, 56, },
 		[18] = { 66, 57, },
 		[19] = { 68, 58, },
-		[20] = { 70, 59, },
+		[20] = { 70, 64, },
 		[21] = { 72, 60, },
 		[22] = { 74, 61, },
 		[23] = { 76, 62, },

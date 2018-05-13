@@ -1936,6 +1936,8 @@ skills["Fireball"] = {
 		skill("CritChance", 6), 
 		--"base_is_projectile" = ?
 		skill("radius", 9), 
+		mod("Damage", "MORE", 88, 0, KeywordFlag.Ignite),
+		mod("Damage", "MORE",20),
 	},
 	qualityMods = {
 		mod("EnemyIgniteChance", "BASE", 0.5), --"base_chance_to_ignite_%" = 0.5
@@ -2024,6 +2026,8 @@ skills["VaalFireballSpiralNova"] = {
 		--"projectile_spiral_nova_angle" = -720
 		mod("AreaOfEffect", "INC", 50), --"base_skill_area_of_effect_+%" = 50
 		--"base_is_projectile" = ?
+		mod("Damage", "MORE", 88, 0, KeywordFlag.Ignite),
+		mod("Damage", "MORE",20),
 	},
 	qualityMods = {
 		mod("EnemyIgniteChance", "BASE", 1.5), --"base_chance_to_ignite_%" = 1.5
@@ -2325,7 +2329,7 @@ skills["Flameblast"] = {
 		skill("damageEffectiveness", 0.5), 
 		skill("CritChance", 5), 
 		mod("Damage", "MORE", 110, 0, KeywordFlag.Hit, { type = "Multiplier", var = "FlameblastStage" }), --"charged_blast_spell_damage_+%_final_per_stack" = 110
-		mod("Damage", "MORE", 55, 0, KeywordFlag.Ailment, { type = "Multiplier", var = "FlameblastStage" }), --"flameblast_ailment_damage_+%_final_per_stack" = 55
+		mod("Damage", "MORE", 110, 0, KeywordFlag.Ailment, { type = "Multiplier", var = "FlameblastStage" }), --"flameblast_ailment_damage_+%_final_per_stack" = 55
 		--"is_area_damage" = ?
 		--"base_skill_show_average_damage_instead_of_dps" = ?
 		mod("Multiplier:FlameblastStage", "BASE", 9, 0, 0, { type = "SkillPart", skillPart = 2 }), 
@@ -2401,7 +2405,7 @@ skills["VaalFlameblast"] = {
 		skill("damageEffectiveness", 0.6), 
 		skill("CritChance", 5), 
 		mod("Damage", "MORE", 110, 0, KeywordFlag.Hit, { type = "Multiplier", var = "FlameblastStage" }), --"charged_blast_spell_damage_+%_final_per_stack" = 110
-		mod("Damage", "MORE", 55, 0, KeywordFlag.Ailment, { type = "Multiplier", var = "FlameblastStage" }), --"flameblast_ailment_damage_+%_final_per_stack" = 55
+		mod("Damage", "MORE", 110, 0, KeywordFlag.Ailment, { type = "Multiplier", var = "FlameblastStage" }), --"flameblast_ailment_damage_+%_final_per_stack" = 55
 		--"is_area_damage" = ?
 		skill("showAverage", true), --"base_skill_show_average_damage_instead_of_dps" = ?
 		mod("Multiplier:FlameblastStage", "BASE", 9), 

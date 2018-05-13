@@ -433,10 +433,7 @@ skills["BladeVortex"] = {
 		},
 		{
 			name = "10 Blades",
-		},
-		{
-			name = "20 Blades",
-		},
+		}
 	},
 	baseFlags = {
 		spell = true,
@@ -448,10 +445,9 @@ skills["BladeVortex"] = {
 		skill("damageEffectiveness", 0.3), 
 		skill("CritChance", 6), 
 		skill("duration", 5), --"base_skill_effect_duration" = 5000
-		--"maximum_number_of_spinning_blades" = 20
-		mod("Damage", "MORE", 20, 0, KeywordFlag.Ailment, { type = "Multiplier", var = "BladeVortexBlade" }), --"blade_vortex_ailment_damage_+%_per_blade_final" = 20
-		--"blade_vortex_hit_rate_+%_per_blade" = 10
-		mod("Damage", "MORE", 30, 0, KeywordFlag.Hit, { type = "Multiplier", var = "BladeVortexBlade" }), --"blade_vortex_damage_+%_per_blade_final" = 30
+		--"maximum_number_of_spinning_blades" = 10
+		--"blade_vortex_hit_rate_+%_per_blade" = 35
+		mod("Damage", "MORE", 35, 0, KeywordFlag.Hit, { type = "Multiplier", var = "BladeVortexBlade" }), --"blade_vortex_damage_+%_per_blade_final" = 30
 		--"is_area_damage" = ?
 		--"skill_can_add_multiple_charges_per_action" = ?
 		--"action_ignores_crit_tracking" = ?
@@ -459,11 +455,9 @@ skills["BladeVortex"] = {
 		skill("radius", 15), 
 		mod("Multiplier:BladeVortexBlade", "BASE", 5, 0, 0, { type = "SkillPart", skillPart = 2 }), 
 		mod("Multiplier:BladeVortexBlade", "BASE", 10, 0, 0, { type = "SkillPart", skillPart = 3 }), 
-		mod("Multiplier:BladeVortexBlade", "BASE", 20, 0, 0, { type = "SkillPart", skillPart = 4 }), 
 		skill("hitTimeOverride", 0.6, { type = "SkillPart", skillPart = 1 }), 
-		skill("hitTimeOverride", 0.4, { type = "SkillPart", skillPart = 2 }), 
-		skill("hitTimeOverride", 0.3, { type = "SkillPart", skillPart = 3 }), 
-		skill("hitTimeOverride", 0.2, { type = "SkillPart", skillPart = 4 }), 
+		skill("hitTimeOverride", 0.34, { type = "SkillPart", skillPart = 2 }), 
+		skill("hitTimeOverride", 0.17, { type = "SkillPart", skillPart = 3 }), 
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
@@ -846,9 +840,10 @@ skills["BurningArrow"] = {
 	},
 	baseMods = {
 		skill("castTime", 1), 
-		mod("EnemyIgniteChance", "BASE", 20), --"base_chance_to_ignite_%" = 20
+		mod("EnemyIgniteChance", "BASE", 49), --"base_chance_to_ignite_%" = 20
 		mod("SkillPhysicalDamageConvertToFire", "BASE", 50), --"skill_physical_damage_%_to_convert_to_fire" = 50
-		--"skill_can_fire_arrows" = ?
+		--"skill_can_fire_arrows" = ?,
+		mod("Damage", "MORE", 68, 0, KeywordFlag.Ignite), --"support_ignite_prolif_ignite_damage_+%_final"
 	},
 	qualityMods = {
 		mod("EnemyIgniteDuration", "INC", 3), --"ignite_duration_+%" = 3
