@@ -2334,7 +2334,7 @@ skills["Flameblast"] = {
 		--"base_skill_show_average_damage_instead_of_dps" = ?
 		mod("Multiplier:FlameblastStage", "BASE", 9, 0, 0, { type = "SkillPart", skillPart = 2 }), 
 		skill("dpsMultiplier", 0.1, { type = "SkillPart", skillPart = 2 }), 
-		mod("EnemyIgniteChance", "BASE", 50)
+		mod("EnemyIgniteChance", "BASE", 50),
 	},
 	qualityMods = {
 		mod("Damage", "INC", 1, 0, 0, nil), --"damage_+%" = 1
@@ -3422,6 +3422,100 @@ skills["Incinerate"] = {
 		[28] = { 86, 10, 271, 406, },
 		[29] = { 88, 10, 295, 442, },
 		[30] = { 90, 10, 320, 480, },
+	},
+}
+skills["newIncinerate"] = {
+	name = "New Incinerate",
+	gemTags = {
+		intelligence = true,
+		active_skill = true,
+		spell = true,
+		area = true,
+		channelling = true,
+		fire = true,
+	},
+	gemTagString = "Spell, Fire, Chanelling, AoE",
+	gemStr = 0,
+	gemDex = 0,
+	gemInt = 100,
+	color = 3,
+	description = "Continuously launches a torrent of fire from your hand, repeatedly damaging enemies. As you channel this spell longer, the flames spread wider close to you and spread longer directly in front of you. When you stop channelling you release a wave of fire damage over a wide and long area that will apply a powerful ignite.",
+	skillTypes = { [2] = true, [10] = true, [11] = true, [18] = true, [33] = true, [58] = true, },
+	parts = {
+		{
+			name = "Base",
+		},
+		{
+			name = "8 Stages",
+		},
+		{
+			name = "Release at 8 Stages",
+		},
+	},
+	baseFlags = {
+		spell = true,
+		fire = true,
+		area = true,
+	},
+	baseMods = {
+		skill("castTime", 0.2), 
+		skill("damageEffectiveness", 0.3), 
+		skill("CritChance", 5), 
+		skill("manaCost", 5), 
+		skill("radius", 15), 
+		--"charged_attack_damage_per_stack_+%_final" = 20
+		--"is_area_damage" = ?
+		--"base_skill_show_average_damage_instead_of_dps" = ?
+		--"skill_can_add_multiple_charges_per_action" = ?
+		mod("Damage", "MORE", 25, 0, KeywordFlag.Hit, { type = "Multiplier", var = "IncinerateStage" }),
+		mod("Damage", "MORE", 25, 0, KeywordFlag.Ailment, { type = "Multiplier", var = "IncinerateStage" }),
+		--"is_area_damage" = ?
+		--"base_skill_show_average_damage_instead_of_dps" = ?
+		mod("Multiplier:IncinerateStage", "BASE", 8, 0, 0, { type = "SkillPart", skillPart = 2 }), 
+		--skill("dpsMultiplier", 0.1, { type = "SkillPart", skillPart = 2 }),
+		mod("EnemyIgniteChance" , "BASE" , 100 , 0 , 0 , { type = "SkillPart", skillPart = 3 }),
+		mod("Damage", "MORE", 1800, 0, bit.bor(KeywordFlag.Ailment), { type = "SkillPart", skillPart = 3 }), 
+		mod("Damage", "MORE", 360, 0, bit.bor(KeywordFlag.Hit), { type = "SkillPart", skillPart = 3 }), 
+	},
+	qualityMods = {
+		mod("FireDamage", "INC", 1, ModFlag.Fire, 0, nil),
+	},
+	levelMods = {
+		[1] = skill("levelRequirement", nil),
+		[2] = skill("FireMin", nil), 
+		[3] = skill("FireMax", nil), 
+	},
+	levels = {
+		[1] = {70, 163, 245, },
+		[2] = {70, 163, 245, },
+		[3] = {70, 163, 245, },
+		[4] = {70, 163, 245, },
+		[5] = {70, 163, 245, },
+		[6] = {70, 163, 245, },
+		[7] = {70, 163, 245, },
+		[8] = {70, 163, 245, },
+		[9] = {70, 163, 245, },
+		[10] = {70, 163, 245, },
+		[11] = {70, 163, 245, },
+		[12] = {70, 163, 245, },
+		[13] = {70, 163, 245, },
+		[14] = {70, 163, 245, },
+		[15] = {70, 163, 245, },
+		[16] = {70, 163, 245, },
+		[17] = {70, 163, 245, },
+		[18] = {70, 163, 245, },
+		[19] = {70, 163, 245, },
+		[20] = {70, 163, 245, },
+		[21] = {70, 163, 245, },
+		[22] = {70, 163, 245, },
+		[23] = {70, 163, 245, },
+		[24] = {70, 163, 245, },
+		[25] = {70, 163, 245, },
+		[26] = {70, 163, 245, },
+		[27] = {70, 163, 245, },
+		[28] = {70, 163, 245, },
+		[29] = {70, 163, 245, },
+		[30] = {70, 163, 245, },
 	},
 }
 skills["ClusterBurst"] = {
