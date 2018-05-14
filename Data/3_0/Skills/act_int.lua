@@ -3474,8 +3474,8 @@ skills["newIncinerate"] = {
 		mod("Multiplier:IncinerateStage", "BASE", 8, 0, 0, { type = "SkillPart", skillPart = 2 }), 
 		--skill("dpsMultiplier", 0.1, { type = "SkillPart", skillPart = 2 }),
 		mod("EnemyIgniteChance" , "BASE" , 100 , 0 , 0 , { type = "SkillPart", skillPart = 3 }),
-		mod("Damage", "MORE", 1800, 0, bit.bor(KeywordFlag.Ailment), { type = "SkillPart", skillPart = 3 }), 
-		mod("Damage", "MORE", 360, 0, bit.bor(KeywordFlag.Hit), { type = "SkillPart", skillPart = 3 }), 
+		mod("Damage", "MORE", 1000, 0, bit.bor(KeywordFlag.Ailment), { type = "SkillPart", skillPart = 3 }), 
+		mod("Damage", "MORE", 260, 0, bit.bor(KeywordFlag.Hit), { type = "SkillPart", skillPart = 3 }), 
 	},
 	qualityMods = {
 		mod("FireDamage", "INC", 1, ModFlag.Fire, 0, nil),
