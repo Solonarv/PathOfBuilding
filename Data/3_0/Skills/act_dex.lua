@@ -458,8 +458,8 @@ skills["BladeVortex"] = {
 		mod("CritChance", "INC", 50, 0, 0, { type = "SkillPart", skillPart = 2}),
 		mod("CritChance", "INC", 100, 0, 0, { type = "SkillPart", skillPart = 3}),
 		skill("hitTimeOverride", 0.6, { type = "SkillPart", skillPart = 1 }), 
-		skill("hitTimeOverride", 0.34, { type = "SkillPart", skillPart = 2 }), 
-		skill("hitTimeOverride", 0.17, { type = "SkillPart", skillPart = 3 }),
+		skill("hitTimeOverride", 0.218, { type = "SkillPart", skillPart = 2 }), 
+		skill("hitTimeOverride", 0.133, { type = "SkillPart", skillPart = 3 }),
 	},
 	qualityMods = {
 		mod("AreaOfEffect", "INC", 0.5), --"base_skill_area_of_effect_+%" = 0.5
