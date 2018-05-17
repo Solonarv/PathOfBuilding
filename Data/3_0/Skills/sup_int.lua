@@ -401,7 +401,7 @@ skills["SupportChanceToIgnite"] = {
 	excludeSkillTypes = { },
 	baseMods = {
 		mod("ManaCost", "MORE", 20), 
-		mod("FireResist", "BASE", -19, 0, 0, { type = "GlobalEffect", effectType = "Debuff" }),
+		mod("FireResist", "BASE", -19, 0, 0, { type = "GlobalEffect", effectType = "Debuff" , effectName = "Combustion }),
 	},
 	qualityMods = {
 		mod("FireDamage", "INC", 0.5), --"fire_damage_+%" = 0.5
